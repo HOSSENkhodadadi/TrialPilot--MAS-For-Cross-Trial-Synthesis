@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trialpilot"
+version = "0.1.0"
+description = "Autonomous Multi-Agent System for Cross-Trial Synthesis"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "lifelines>=0.29.0",
+    "scipy>=1.12.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5.0",
+]
+
+[project.scripts]
+trialpilot = "trialpilot.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trialpilot"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

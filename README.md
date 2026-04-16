@@ -105,6 +105,17 @@ src/trialpilot/
 - **Phase 3**: Human-in-the-loop dashboard for real-time doctor feedback
 - **Phase 4**: Benchmarking paper on agentic workflow efficiency
 
+## Tobe added
+
+Uncertainty Quantification: 
+The agent should provide a confidence interval. In medicine, knowing when the AI is unsure is more important than the answer itself.
+
+The "Human-in-the-Loop" Interface: 
+Create a small dashboard where a "Human Doctor" can interrupt the agent workflow, provide feedback, and watch the agents adjust their plan in real-time.
+
+Time reduction calculation: 
+How the agent reduce the time for Trial Protocol Synthesis by X%..
+
 ## License
 
 MIT
